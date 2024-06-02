@@ -84,7 +84,7 @@ export function useGetUserBalance() {
   return userBalance;
 }
 
-export const getUserDAOStatus = () => {
+export const useGetUserDAOStatus = () => {
   const { walletProvider } = useWeb3ModalProvider();
   const { address } = useWeb3ModalAccount();
   const [userDaoStatus, setUserDaoStatus] = useState();

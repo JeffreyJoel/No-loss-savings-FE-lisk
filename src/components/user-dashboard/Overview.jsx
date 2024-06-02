@@ -3,7 +3,7 @@ import DepositWithdrawTab from "./DepositWithdrawTab";
 import TransactionCard from "./TransactionCard";
 import OverviewCard from "../dashboards/OverviewCard";
 import {
-  getUserDAOStatus,
+  useGetUserDAOStatus,
   useGetUserBalance,
   getDAOAgreementResponse,
   getDAOAgreementStatus,
@@ -16,7 +16,7 @@ import DAORequestSubmitted from "./DAORequestSubmitted";
 
 export default function asOverview() {
   const userBalance = useGetUserBalance();
-  const isDao = getUserDAOStatus();
+  const isDao = useGetUserDAOStatus();
 
   const hasResponded = getDAOAgreementResponse();
   const hasAgreed = getDAOAgreementStatus();
